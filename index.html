@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Blog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arima:wght@400;500;600;700&family=Palanquin:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/images/logo.png" type="image/png">
+</head>
+<body>
+  <!-- ========== HEADER (shared) ========== -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="assets/images/logo.png" alt="Travel Blog" class="logo-img">
+      </a>
+      <nav class="nav desktop-nav">
+        <a href="#highlights">Highlights</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="menu-btn mobile-only" id="menuBtn" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#highlights" class="mobile-link">Highlights</a>
+    <a href="#faq" class="mobile-link">FAQ</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </div>
+
+  <!-- ========== HERO (Part: Hero) – exact Figma export ========== -->
+  <section class="hero hero-figma" aria-label="Cappadocia">
+    <img src="assets/images/hero-cappadocia.png" alt="Cappadocia – From sunrise balloons to hidden cave dwellings" class="hero-full-img">
+    <!-- accessible text for screen readers / SEO -->
+    <div class="visually-hidden">
+      <h1>Cappadocia</h1>
+      <p>From sunrise balloons to hidden cave dwellings, every moment feels unreal in the best way.</p>
+    </div>
+  </section>
+
+  <!-- ========== HIGHLIGHTS + CAROUSEL (Part: Highlights) ========== -->
+  <section class="highlights" id="highlights">
+    <div class="section-header">
+      <div class="section-icon">🚀</div>
+      <h2>Highlights</h2>
+      <p class="section-desc">
+        From the vibrant cultures of Asia to the sun-drenched islands of the Caribbean and the serene landscapes of Scandinavia, each destination offers a distinct way to explore the world.
+      </p>
+    </div>
+
+    <div class="carousel-wrapper">
+      <div class="carousel" id="carousel">
+        <a href="article1.html" class="carousel-slide active">
+          <img src="assets/images/highlight-beaches.jpg" alt="The World's Most Breathtaking Beaches">
+          <div class="slide-overlay">
+            <h3>The World's Most Breathtaking Beaches</h3>
+            <p>From powder-soft white sands to dramatic coastlines kissed by turquoise waves, these beaches are more than destinations – they're feelings.</p>
+          </div>
+        </a>
+        <a href="article2.html" class="carousel-slide">
+          <img src="assets/images/highlight-copenhagen.jpg" alt="Copenhagen in 3 Days">
+          <div class="slide-overlay">
+            <h3>Copenhagen in 3 Days: Big Experiences, Smart Spending</h3>
+            <p>Discover Copenhagen, where historic charm meets modern design, vibrant cycling culture and waterfront living.</p>
+          </div>
+        </a>
+        <a href="article3.html" class="carousel-slide">
+          <img src="assets/images/highlight-pattaya.jpg" alt="Pattaya Pulse">
+          <div class="slide-overlay">
+            <h3>Pattaya Pulse: Food, Sun and Neon Nights</h3>
+            <p>From bustling promenades to nearby islands, the city offers an energetic and diverse escape. Discover Pattaya City, with vibrant nightlife and rich cultural landmarks.</p>
+          </div>
+        </a>
+        <a href="article2.html" class="carousel-slide">
+          <img src="assets/images/highlight-fuji.jpg" alt="Mountain Fuji">
+          <div class="slide-overlay">
+            <h3>Mountain Fuji</h3>
+            <p>The most iconic mountain and an active volcano located about 100 kilometers southwest of Tokyo. Written with the characters for “wealth” and “samurai,” Fuji’s name evokes a sense of strength, honor, and enduring prestige.</p>
+          </div>
+        </a>
+        <div class="carousel-dots" id="carouselDots">
+          <button class="dot active" data-index="0" aria-label="Slide 1"></button>
+          <button class="dot" data-index="1" aria-label="Slide 2"></button>
+          <button class="dot" data-index="2" aria-label="Slide 3"></button>
+          <button class="dot" data-index="3" aria-label="Slide 4"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FAQ (Part: FAQ) ========== -->
+  <section class="faq" id="faq">
+    <div class="section-header">
+      <div class="section-icon">❓</div>
+      <h2>FAQ</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question">What's the story behind my travel blog? <span class="faq-icon">▼</span></button>
+        <div class="faq-answer"><p>This blog started as a personal journal of adventures around the world. What began as notes for friends grew into a space to share stories, tips and inspiration for fellow travelers.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">How do I plan, document, and share my travels? <span class="faq-icon">▼</span></button>
+        <div class="faq-answer"><p>I combine thorough research with spontaneous moments. Photos, short videos and honest writing help me capture the feeling of each place so readers can experience it too.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">How can brands, companies, or fellow creators collaborate with me or get in touch? <span class="faq-icon">▼</span></button>
+        <div class="faq-answer"><p>I'm always open to meaningful collaborations. Reach out via the contact form below and let's explore how we can create something great together.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">How can readers support this blog and the work behind it? <span class="faq-icon">▼</span></button>
+        <div class="faq-answer"><p>Sharing posts, leaving comments and recommending the blog to friends means a lot. If you'd like to support further, feel free to get in touch!</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT (Part: Contact) ========== -->
+  <section class="contact" id="contact">
+    <div class="section-header">
+      <div class="section-icon">👤</div>
+      <h2>Contact form</h2>
+      <p class="section-desc">Have a question or an idea to collaborate?<br>Get in touch—I'd love to hear from you and explore how we can work together.</p>
+    </div>
+    <form class="contact-form" id="contactForm">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">What's your name?</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">What's your email?</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="message">How can I help?</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </div>
+      <div class="form-checkbox">
+        <input type="checkbox" id="privacy" name="privacy" required>
+        <label for="privacy">I've read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined.</label>
+      </div>
+      <button type="submit" class="btn-send">Send</button>
+    </form>
+    <div class="form-success" id="formSuccess" hidden>Thank you! Your message has been sent successfully.</div>
+  </section>
+
+  <!-- ========== FOOTER (shared) ========== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <a href="#">Imprint</a>
+        <a href="#">Cookie Preferences</a>
+        <span>© Travel Blog 2026</span>
+      </div>
+      <div class="footer-social">
+        <a href="#" aria-label="TikTok" class="social-icon">♪</a>
+        <a href="#" aria-label="YouTube" class="social-icon">▶</a>
+        <a href="#" aria-label="Facebook" class="social-icon">f</a>
+        <a href="#" aria-label="Instagram" class="social-icon">📷</a>
+      </div>
+    </div>
+  </footer>
+
+  <nav class="bottom-nav mobile-only">
+    <a href="index.html" class="bottom-nav-item active">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+    </a>
+    <a href="#highlights" class="bottom-nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 00-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 012-3.95A12.88 12.88 0 0122 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 01-4 2z"/></svg>
+    </a>
+    <a href="#faq" class="bottom-nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+    </a>
+    <a href="#contact" class="bottom-nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+    </a>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>

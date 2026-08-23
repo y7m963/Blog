@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pattaya Pulse – Travel Blog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arima:wght@400;500;600;700&family=Palanquin:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/images/logo.png" type="image/png">
+  <style>
+    .graph-section { padding: 20px 24px 60px; max-width: 1100px; margin: 0 auto; }
+    .graph-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 32px 0; }
+    .graph-card {
+      background: #f8f5eb;
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    }
+    .graph-card h3 {
+      font-family: 'Arima', serif;
+      font-size: 1.15rem;
+      color: #54370D;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+    .bar-chart { display: flex; align-items: flex-end; justify-content: space-around; height: 180px; gap: 12px; }
+    .bar-wrap { display: flex; flex-direction: column; align-items: center; flex: 1; }
+    .bar {
+      width: 100%;
+      max-width: 48px;
+      background: linear-gradient(180deg, #4EA487, #3d8570);
+      border-radius: 8px 8px 0 0;
+      transition: height 0.6s ease;
+    }
+    .bar-label { font-size: 0.75rem; color: #54370D; margin-top: 8px; text-align: center; }
+    .bar-value { font-size: 0.7rem; color: #4EA487; font-weight: 600; margin-bottom: 4px; }
+    .pie-legend { display: flex; flex-wrap: wrap; gap: 10px 16px; justify-content: center; margin-top: 16px; }
+    .pie-legend span { font-size: 0.85rem; color: #54370D; display: flex; align-items: center; gap: 6px; }
+    .pie-dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+    .stat-row { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 16px; margin: 24px 0; }
+    .stat-box {
+      text-align: center;
+      background: rgba(78,164,135,0.12);
+      border-radius: 16px;
+      padding: 20px 28px;
+      min-width: 140px;
+    }
+    .stat-num { font-family: 'Arima', serif; font-size: 2rem; font-weight: 700; color: #4EA487; }
+    .stat-desc { font-size: 0.9rem; color: #54370D; }
+    @media (max-width: 700px) {
+      .graph-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="assets/images/logo.png" alt="Travel Blog" class="logo-img">
+      </a>
+      <nav class="nav desktop-nav">
+        <a href="index.html#highlights">Highlights</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <button class="menu-btn mobile-only" id="menuBtn" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html#highlights" class="mobile-link">Highlights</a>
+    <a href="index.html#faq" class="mobile-link">FAQ</a>
+    <a href="index.html#contact" class="mobile-link">Contact</a>
+  </div>
+
+  <section class="article-hero">
+    <div class="article-hero-inner">
+      <div class="article-content">
+        <p class="article-kicker">Data meets destination</p>
+        <h1>Pattaya Pulse: Food, Sun and Neon Nights</h1>
+        <p class="article-lead">From bustling promenades to nearby islands, the city offers an energetic and diverse escape. Discover Pattaya City with vibrant nightlife and rich cultural landmarks.</p>
+        <div class="article-meta">
+          <span>📅 Date: 05.03.2026</span>
+          <span>👓 Reading time: 7 min.</span>
+          <span>👁 Read: 212</span>
+          <span>↗ Shared: 34</span>
+        </div>
+      </div>
+      <aside class="author-card">
+        <img src="assets/images/author.png" alt="Tamara Wallker" class="author-img">
+        <h3>Tamara Wallker</h3>
+        <p class="author-role">Author</p>
+        <p class="author-bio">I've been traveling since 2017, chasing moments instead of plans. I'm fascinated by snakes, love sharks, would happily spend weeks deep in the jungle, and can never get enough papaya.</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- GRAPH SECTION -->
+  <section class="graph-section">
+    <div class="stat-row">
+      <div class="stat-box">
+        <div class="stat-num">28°C</div>
+        <div class="stat-desc">Avg. temperature</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">9.2M</div>
+        <div class="stat-desc">Visitors / year</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">4.6★</div>
+        <div class="stat-desc">Traveler rating</div>
+      </div>
+    </div>
+
+    <div class="graph-grid">
+      <div class="graph-card">
+        <h3>Visitor interest by category</h3>
+        <div class="bar-chart">
+          <div class="bar-wrap">
+            <span class="bar-value">85%</span>
+            <div class="bar" style="height:85%"></div>
+            <span class="bar-label">Beach</span>
+          </div>
+          <div class="bar-wrap">
+            <span class="bar-value">72%</span>
+            <div class="bar" style="height:72%"></div>
+            <span class="bar-label">Food</span>
+          </div>
+          <div class="bar-wrap">
+            <span class="bar-value">68%</span>
+            <div class="bar" style="height:68%"></div>
+            <span class="bar-label">Nightlife</span>
+          </div>
+          <div class="bar-wrap">
+            <span class="bar-value">45%</span>
+            <div class="bar" style="height:45%"></div>
+            <span class="bar-label">Culture</span>
+          </div>
+          <div class="bar-wrap">
+            <span class="bar-value">38%</span>
+            <div class="bar" style="height:38%"></div>
+            <span class="bar-label">Islands</span>
+          </div>
+        </div>
+      </div>
+      <div class="graph-card">
+        <h3>Best months to visit</h3>
+        <div class="bar-chart">
+          <div class="bar-wrap">
+            <span class="bar-value">Nov</span>
+            <div class="bar" style="height:90%;background:linear-gradient(180deg,#F1C953,#e0b83e)"></div>
+            <span class="bar-label">Peak</span>
+          </div>
+          <div class="bar-wrap">
+            <span class="bar-value">Dec</span>
+            <div class="bar" style="height:95%;background:linear-gradient(180deg,#F1C953,#e0b83e)"></div>
+            <span class="bar-label">Peak</span>
+          </div>
+          <div class="bar-wrap">
+            <span class="bar-value">Jan</span>
+            <div class="bar" style="height:88%;background:linear-gradient(180deg,#F1C953,#e0b83e)"></div>
+            <span class="bar-label">Peak</span>
+          </div>
+          <div class="bar-wrap">
+            <span class="bar-value">Apr</span>
+            <div class="bar" style="height:40%"></div>
+            <span class="bar-label">Hot</span>
+          </div>
+          <div class="bar-wrap">
+            <span class="bar-value">Sep</span>
+            <div class="bar" style="height:35%"></div>
+            <span class="bar-label">Rain</span>
+          </div>
+        </div>
+        <div class="pie-legend">
+          <span><i class="pie-dot" style="background:#F1C953"></i> High season</span>
+          <span><i class="pie-dot" style="background:#4EA487"></i> Shoulder / low</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <p>Pattaya is more than neon lights and beach chairs. The numbers tell a story of a city that reinvented itself – from a quiet fishing village to one of Thailand’s most visited destinations.</p>
+    <p>Whether you come for the islands, the street food, or the buzzing night markets, the data above can help you plan smarter: pick the right month, focus on what matters most to you, and leave room for surprise.</p>
+    <div class="pro-tips">
+      <div class="pro-tips-label">💡 Pro tips</div>
+      <ol>
+        <li>November to February offers the best weather and slightly lower humidity.</li>
+        <li>Combine a day trip to Koh Larn with an evening on Walking Street for the full Pattaya contrast.</li>
+      </ol>
+    </div>
+    <div class="share-box">
+      <p>Follow me for more content like this, and share the article with your friends!</p>
+      <button class="btn-share">↗ Share</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <a href="#">Imprint</a>
+        <a href="#">Cookie Preferences</a>
+        <span>© Travel Blog 2026</span>
+      </div>
+      <div class="footer-social">
+        <a href="#" class="social-icon">♪</a>
+        <a href="#" class="social-icon">▶</a>
+        <a href="#" class="social-icon">f</a>
+        <a href="#" class="social-icon">📷</a>
+      </div>
+    </div>
+  </footer>
+
+  <nav class="bottom-nav mobile-only">
+    <a href="index.html" class="bottom-nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+    </a>
+    <a href="index.html#highlights" class="bottom-nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 00-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 012-3.95A12.88 12.88 0 0122 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 01-4 2z"/></svg>
+    </a>
+    <a href="index.html#faq" class="bottom-nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+    </a>
+    <a href="index.html#contact" class="bottom-nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+    </a>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>

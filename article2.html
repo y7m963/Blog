@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>City Adventures – Travel Blog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arima:wght@400;500;600;700&family=Palanquin:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/images/logo.png" type="image/png">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="assets/images/logo.png" alt="Travel Blog" class="logo-img">
+      </a>
+      <nav class="nav desktop-nav">
+        <a href="index.html#highlights">Highlights</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <button class="menu-btn mobile-only" id="menuBtn" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html#highlights" class="mobile-link">Highlights</a>
+    <a href="index.html#faq" class="mobile-link">FAQ</a>
+    <a href="index.html#contact" class="mobile-link">Contact</a>
+  </div>
+
+  <section class="article-hero">
+    <div class="article-hero-inner">
+      <div class="article-content">
+        <p class="article-kicker">Urban Explorations</p>
+        <h1>Vibrant City Adventures</h1>
+        <p class="article-lead">Discover the pulse of the world's most exciting urban destinations – from hidden alleyways to rooftop views that take your breath away.</p>
+        <div class="article-meta">
+          <span>📅 Date: 12.02.2026</span>
+          <span>👓 Reading time: 5 min.</span>
+          <span>👁 Read: 98</span>
+          <span>↗ Shared: 11</span>
+        </div>
+      </div>
+      <aside class="author-card">
+        <img src="assets/images/author.png" alt="Tamara Wallker" class="author-img">
+        <h3>Tamara Wallker</h3>
+        <p class="author-role">Author</p>
+        <p class="author-bio">I've been traveling since 2017, chasing moments instead of plans. I'm fascinated by snakes, love sharks, would happily spend weeks deep in the jungle, and can never get enough papaya.</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- VIDEO SECTION – Figma style: poster + play button, playable -->
+  <section class="article-video-section">
+    <div class="video-wrapper" id="videoBox">
+      <video
+        id="articleVideo"
+        poster="assets/images/highlight-copenhagen.jpg"
+        playsinline
+        preload="metadata"
+        controls
+        title="City Adventures – Travel Film">
+        <!-- Free sample video (no YouTube account needed) -->
+        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <button class="video-play-btn" id="videoPlayBtn" aria-label="Play video" type="button">
+        <svg viewBox="0 0 80 80" width="80" height="80" aria-hidden="true">
+          <circle cx="40" cy="40" r="38" fill="rgba(0,0,0,0.45)" stroke="#fff" stroke-width="3"/>
+          <polygon points="32,24 32,56 58,40" fill="#fff"/>
+        </svg>
+      </button>
+    </div>
+  </section>
+  <script>
+    (function () {
+      var box = document.getElementById('videoBox');
+      var vid = document.getElementById('articleVideo');
+      var btn = document.getElementById('videoPlayBtn');
+      if (!box || !vid || !btn) return;
+      function hideBtn() { btn.classList.add('is-hidden'); }
+      function showBtn() { if (vid.paused) btn.classList.remove('is-hidden'); }
+      btn.addEventListener('click', function () {
+        vid.play();
+        hideBtn();
+      });
+      vid.addEventListener('play', hideBtn);
+      vid.addEventListener('pause', showBtn);
+      vid.addEventListener('ended', showBtn);
+    })();
+  </script>
+
+  <section class="article-body">
+    <p>Cities have their own rhythm. Some whisper, some shout, and a few manage to do both at the same time. Walking through their streets is like reading a living book – every corner turns a new page.</p>
+    <p>Whether you prefer the historic charm of European capitals or the electric energy of Asian megacities, the real adventure begins when you leave the guidebook behind and simply follow the light, the smell of food, or the sound of music.</p>
+    <div class="pro-tips">
+      <div class="pro-tips-label">💡 Pro tips</div>
+      <ol>
+        <li>Use public transport at least once – it is the fastest way to feel like a local.</li>
+        <li>Look up. Some of the most beautiful details in a city are above eye level.</li>
+      </ol>
+    </div>
+    <div class="share-box">
+      <p>Follow me for more content like this, and share the article with your friends!</p>
+      <button class="btn-share">↗ Share</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <a href="#">Imprint</a>
+        <a href="#">Cookie Preferences</a>
+        <span>© Travel Blog 2026</span>
+      </div>
+      <div class="footer-social">
+        <a href="#" class="social-icon">♪</a>
+        <a href="#" class="social-icon">▶</a>
+        <a href="#" class="social-icon">f</a>
+        <a href="#" class="social-icon">📷</a>
+      </div>
+    </div>
+  </footer>
+
+  <nav class="bottom-nav mobile-only">
+    <a href="index.html" class="bottom-nav-item active">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+    </a>
+    <a href="index.html#highlights" class="bottom-nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 00-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 012-3.95A12.88 12.88 0 0122 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 01-4 2z"/></svg>
+    </a>
+    <a href="index.html#faq" class="bottom-nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+    </a>
+    <a href="index.html#contact" class="bottom-nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+    </a>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>

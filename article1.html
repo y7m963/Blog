@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Breathtaking Beaches – Travel Blog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arima:wght@400;500;600;700&family=Palanquin:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/images/logo.png" type="image/png">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="assets/images/logo.png" alt="Travel Blog" class="logo-img">
+      </a>
+      <nav class="nav desktop-nav">
+        <a href="index.html#highlights">Highlights</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <button class="menu-btn mobile-only" id="menuBtn" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html#highlights" class="mobile-link">Highlights</a>
+    <a href="index.html#faq" class="mobile-link">FAQ</a>
+    <a href="index.html#contact" class="mobile-link">Contact</a>
+  </div>
+
+  <!-- ARTICLE HEADER + AUTHOR -->
+  <section class="article-hero">
+    <div class="article-hero-inner">
+      <div class="article-content">
+        <p class="article-kicker">Where the Ocean Meets Your Soul</p>
+        <h1>The World's Most Breathtaking Beaches</h1>
+        <p class="article-lead">From powder-soft white sands to dramatic coastlines kissed by turquoise waves, these beaches are more than destinations – they're feelings.</p>
+        <div class="article-meta">
+          <span>📅 Date: 26.01.2026</span>
+          <span>👓 Reading time: 6 min.</span>
+          <span>👁 Read: 164</span>
+          <span>↗ Shared: 18</span>
+        </div>
+      </div>
+      <aside class="author-card">
+        <img src="assets/images/author.png" alt="Tamara Wallker" class="author-img">
+        <h3>Tamara Wallker</h3>
+        <p class="author-role">Author</p>
+        <p class="author-bio">I've been traveling since 2017, chasing moments instead of plans. I'm fascinated by snakes, love sharks, would happily spend weeks deep in the jungle, and can never get enough papaya. As long as there's a next destination, I know I'm exactly where I'm meant to be.</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- TOP 5 CAROUSEL – Figma exact images -->
+  <section class="article-carousel-section">
+    <h2 class="article-section-title">TOP 5 beach destinations for 2026</h2>
+    <div class="card-carousel" id="cardCarousel">
+      <div class="card-track">
+        <div class="dest-card pos-0"><img src="assets/images/carousel-fish.jpg" alt="Underwater tropical fish"></div>
+        <div class="dest-card pos-1"><img src="assets/images/carousel-island.jpg" alt="Sandbar island with couple"></div>
+        <div class="dest-card pos-2"><img src="assets/images/carousel-umbrellas.jpg" alt="Thatched umbrellas and loungers"></div>
+        <div class="dest-card pos-3"><img src="assets/images/carousel-rocks.jpg" alt="Turquoise bay with granite rocks"></div>
+        <div class="dest-card pos-4"><img src="assets/images/carousel-yellow-dress.jpg" alt="Woman in yellow dress on beach"></div>
+      </div>
+      <div class="card-nav">
+        <button class="card-prev" id="cardPrev" aria-label="Previous">‹</button>
+        <button class="card-next" id="cardNext" aria-label="Next">›</button>
+      </div>
+      <div class="card-dots" id="cardDots">
+        <button class="dot active" data-i="0" aria-label="1"></button>
+        <button class="dot" data-i="1" aria-label="2"></button>
+        <button class="dot" data-i="2" aria-label="3"></button>
+        <button class="dot" data-i="3" aria-label="4"></button>
+        <button class="dot" data-i="4" aria-label="5"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE BODY -->
+  <section class="article-body">
+    <p>The best beaches in the world are not just about soft sand and clear water. They are places where time slows down, where the sound of the waves becomes a meditation, and where every sunset feels like a private performance just for you.</p>
+    <p>From the Caribbean to Southeast Asia and the hidden coves of the Mediterranean, these destinations offer something unique – whether it is dramatic cliffs, powder-white sand, or the simple joy of walking barefoot for hours.</p>
+    <div class="pro-tips">
+      <div class="pro-tips-label">💡 Pro tips</div>
+      <ol>
+        <li>Arrive early in the morning to enjoy the beach almost alone and catch the softest light for photos.</li>
+        <li>Bring reef-safe sunscreen and a reusable water bottle – many of the most beautiful places are also the most fragile.</li>
+      </ol>
+    </div>
+    <p>No matter which beach you choose, remember that the real magic often lies in the small moments: the first step into warm water, the smell of salt on your skin, and the quiet feeling that you are exactly where you are meant to be.</p>
+    <div class="share-box">
+      <p>Follow me for more content like this, and share the article with your friends!</p>
+      <button class="btn-share">↗ Share</button>
+    </div>
+  </section>
+
+  <!-- CHARTS / INSIGHTS SECTION -->
+  <section class="article-charts">
+    <h2 class="article-section-title">Beach Insights &amp; Numbers</h2>
+    <div class="charts-grid">
+      <div class="chart-card">
+        <h3>Popular Beach Activities</h3>
+        <img src="assets/images/chart-accommodation.png" 
+             alt="Pie chart showing popular beach activities: Snorkeling 30%, Sunbathing 25%, Beach Sports 25%, Swimming 20%">
+        <p class="chart-caption">How travelers spend their time at the beach</p>
+      </div>
+      <div class="chart-card">
+        <h3>Average Accommodation Costs</h3>
+        <img src="assets/images/chart-beach-activities.png" 
+             alt="Bar chart of average nightly rates: Hostel $20, Standard Hotel $30, Luxury Resort $60, Villa $40">
+        <p class="chart-caption">Typical nightly rates near top beach destinations</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <a href="#">Imprint</a>
+        <a href="#">Cookie Preferences</a>
+        <span>© Travel Blog 2026</span>
+      </div>
+      <div class="footer-social">
+        <a href="#" class="social-icon">♪</a>
+        <a href="#" class="social-icon">▶</a>
+        <a href="#" class="social-icon">f</a>
+        <a href="#" class="social-icon">📷</a>
+      </div>
+    </div>
+  </footer>
+
+  <nav class="bottom-nav mobile-only">
+    <a href="index.html" class="bottom-nav-item active">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+    </a>
+    <a href="index.html#highlights" class="bottom-nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 00-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 012-3.95A12.88 12.88 0 0122 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 01-4 2z"/></svg>
+    </a>
+    <a href="index.html#faq" class="bottom-nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+    </a>
+    <a href="index.html#contact" class="bottom-nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+    </a>
+  </nav>
+
+  <script src="script.js"></script>
+
+  <script>
+    // Stacked card carousel – exact Figma prototype behavior
+    (function () {
+      const track = document.querySelector('.card-track');
+      if (!track) return;
+
+      const cards = Array.from(track.querySelectorAll('.dest-card'));
+      const dots  = Array.from(document.querySelectorAll('#cardDots .dot'));
+      const N = cards.length;
+      if (N === 0) return;
+
+      // visualSlots[pos] = index of the card that currently sits in that visual slot
+      // slot 0 = far left, slot 2 = center (large), slot 4 = far right
+      let visualSlots = [0, 1, 2, 3, 4].slice(0, N);
+      let isAnimating = false;
+      const STEP_MS = 560; // match CSS transition duration
+
+      function render() {
+        visualSlots.forEach(function (cardIndex, pos) {
+          var card = cards[cardIndex];
+          if (!card) return;
+          card.classList.remove('pos-0', 'pos-1', 'pos-2', 'pos-3', 'pos-4');
+          card.classList.add('pos-' + pos);
+        });
+        var centerCardIndex = visualSlots[Math.min(2, visualSlots.length - 1)];
+        dots.forEach(function (dot, i) {
+          dot.classList.toggle('active', i === centerCardIndex);
+        });
+      }
+
+      function next() {
+        visualSlots.unshift(visualSlots.pop());
+        render();
+      }
+
+      function prev() {
+        visualSlots.push(visualSlots.shift());
+        render();
+      }
+
+      // Rotate shortest path so animation is visible step-by-step
+      function goToCard(targetIndex) {
+        if (isAnimating) return;
+        var centerPos = Math.min(2, visualSlots.length - 1);
+        if (visualSlots[centerPos] === targetIndex) return;
+
+        // Find current position of target in visualSlots
+        var currentPos = visualSlots.indexOf(targetIndex);
+        if (currentPos === -1) return;
+
+        // How many next() steps to bring it to center?
+        var stepsNext = (currentPos - centerPos + N) % N;
+        var stepsPrev = (centerPos - currentPos + N) % N;
+        var useNext = stepsNext <= stepsPrev;
+        var steps = useNext ? stepsNext : stepsPrev;
+
+        isAnimating = true;
+        var step = 0;
+        function doStep() {
+          if (step >= steps) {
+            isAnimating = false;
+            return;
+          }
+          if (useNext) next();
+          else prev();
+          step++;
+          if (step < steps) {
+            setTimeout(doStep, STEP_MS);
+          } else {
+            isAnimating = false;
+          }
+        }
+        doStep();
+      }
+
+      var prevBtn = document.getElementById('cardPrev');
+      var nextBtn = document.getElementById('cardNext');
+      if (prevBtn) prevBtn.addEventListener('click', function () {
+        if (isAnimating) return;
+        prev();
+        restartAuto();
+      });
+      if (nextBtn) nextBtn.addEventListener('click', function () {
+        if (isAnimating) return;
+        next();
+        restartAuto();
+      });
+
+      cards.forEach(function (card, i) {
+        card.addEventListener('click', function () {
+          goToCard(i);
+          restartAuto();
+        });
+      });
+
+      dots.forEach(function (dot, i) {
+        dot.addEventListener('click', function () {
+          goToCard(i);
+          restartAuto();
+        });
+      });
+
+      // Auto-play every 4 seconds
+      var autoTimer = null;
+      function startAuto() {
+        stopAuto();
+        autoTimer = setInterval(function () {
+          if (!isAnimating) next();
+        }, 4000);
+      }
+      function stopAuto() {
+        if (autoTimer) {
+          clearInterval(autoTimer);
+          autoTimer = null;
+        }
+      }
+      function restartAuto() {
+        stopAuto();
+        startAuto();
+      }
+
+      track.addEventListener('mouseenter', stopAuto);
+      track.addEventListener('mouseleave', startAuto);
+
+      // Touch swipe on card track
+      var touchX = 0;
+      track.addEventListener('touchstart', function (e) {
+        touchX = e.changedTouches[0].screenX;
+        stopAuto();
+      }, { passive: true });
+      track.addEventListener('touchend', function (e) {
+        var diff = e.changedTouches[0].screenX - touchX;
+        if (Math.abs(diff) > 40 && !isAnimating) {
+          if (diff < 0) next();
+          else prev();
+        }
+        startAuto();
+      }, { passive: true });
+
+      render();
+      setTimeout(startAuto, 500);
+    })();
+  </script>
+
+
+</body>
+</html>
